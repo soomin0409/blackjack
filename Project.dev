@@ -90,18 +90,8 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit6]
-FileName=initialize_f.c
-CompileCpp=0
-Folder=
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
 [Unit7]
-FileName=game_f.c
+FileName=result_f.c
 CompileCpp=0
 Folder=
 Compile=1
@@ -112,6 +102,19 @@ BuildCmd=
 
 [Unit1]
 FileName=BlcakJack.c
+CompileCpp=0
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit8]
+FileName=result_f.c
+
+[Unit6]
+FileName=game_f.c
 CompileCpp=0
 Folder=
 Compile=1

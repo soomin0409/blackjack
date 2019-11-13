@@ -3,24 +3,24 @@
 #include "constant.h"
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int n_user;
-int dollar[n_max_user];
-int cardtray[n_card*n_set];
-int bet[n_max_user];
+int n_user;  // number of player 
+int dollar[n_max_user]; // current dollar
+int cardtray[n_card*n_set]; // number of cards in cardtray
+int bet[n_max_user]; // betting dollar
 int ind=0;// card index 
-int cardhold[n_max_user+1][n_max_card];
-int n_hold[n_max_user+1]={ 0, };
-int sum[n_max_user+1]={ 0, };
-int j=2;
-int ans;
-int v=2;
-int game_end=0;
-
+int cardhold[n_max_user+1][n_max_card]; // current card of player
+int n_hold[n_max_user+1]={ 0, }; // number of player holding card
+int sum[n_max_user+1]={ 0, }; // sum of card
+int j=2; // variable in printcard(), calc_sum()
+int ans; // go or stop answer in getaction_me()
+int v=2; // variable in printcard() , calc_sum()
+int game_end=0; // deciding to keep game 
+int end_card=30; // min card in cardtray
 
 
 int main(int argc, char *argv[]) {
-	int m,b;
-	int round=1;
+	int m,b; // various in print_initial_card()
+	int round=1; // index of round
 	
 	srand((unsigned)time(NULL));
 	

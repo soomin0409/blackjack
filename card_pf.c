@@ -42,7 +42,7 @@ void print_initial_card(){
 			printf("\n");
 	}
 	return ;
-}
+}														// print 2card of player
 
 
 
@@ -74,4 +74,4 @@ void print_card(int i,int n){
 				else if(cardhold[i][k]%52+1==52) printf(" CLVQ ");
 	}
 	return ;
-}
+}													// print current cards of player

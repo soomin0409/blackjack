@@ -22,20 +22,20 @@ void mixcardtray(){
 		}
 	}
 	return ;
-}
+}						// put number in card and mix card
 int pullcard(){
 	int i;
 	i=ind;
 	++ind;
 	return cardtray[i];
-}
+}						// pull card in regular sequence
 void offercard(){
 	int i;
 		cardhold[n_user][0]=pullcard();
-		++n_hold[n_user];
+		++n_hold[n_user];  // server
 	for(i=0;i<n_user;i++){
 		cardhold[i][0]=pullcard();
-		++n_hold[i];
+		++n_hold[i];      // others
 	}
 		cardhold[n_user][1]=pullcard();
 		++n_hold[n_user];
@@ -45,5 +45,5 @@ void offercard(){
 	}
 	return ;
 	
-}
+}						//  offer 2 card (server-others)
 

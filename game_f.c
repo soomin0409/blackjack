@@ -8,6 +8,7 @@ extern int j;
 extern int ans;
 extern int v;
 extern int game_end;
+extern int end_card;
 extern int dollar[n_max_user];
 extern int ind;
 
@@ -18,7 +19,7 @@ void configuser(){
 		if(n_user>n_max_user) printf("try again\n");
 	}while(n_user>n_max_user);
 	return ;
-}
+}							// input number of player
 
 void calc_sum(int i,int k){
 
@@ -30,7 +31,7 @@ void calc_sum(int i,int k){
 	
 		sum[i]+=c;
 	return ;
-}
+}						// sum holding card of player
 	
 void getaction_me(){
 	printf("go or stop: ");
@@ -41,26 +42,26 @@ void getaction_me(){
 		++j;
 	}
 	else return;
-}
+}							//  decide go or stop go=0,stop=others  ver.user
 
 void getaction_com(int i){
 	
 	cardhold[i][v]=pullcard();
 	++n_hold[i];
 	++v;
-	return ;
+	return ;               //  decide go or stop ver.compuer
 }
 
 void keep_go(){
 	int i;
 	for(i=0;i<n_user;i++){
-		if(dollar[i]<=0||ind>=n_card*n_set-30){
+		if(dollar[i]<=0||ind>=n_card*n_set-end_card){
 			game_end=1;
 			break;
 		}
 	}
 	return ;
-}
+}							// if dollar of player=0 end or number of card <=30 , game end
 
 void initial(){
 	int i,h;
@@ -78,7 +79,7 @@ void initial(){
 	v=2;
 	j=2;
 	return ;
-}
+}						// initialize some arrays and variables
 
 
 

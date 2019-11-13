@@ -12,7 +12,7 @@ void initial_dollar(){
 		printf("dollar of player%d : %d\n",i,dollar[i]);
 	}
 	return ;
-}
+}											//  initial dollar of palyer
 
 void bet_dollar(){
 	int i;
@@ -30,4 +30,4 @@ void bet_dollar(){
 	}
 	return ;
 	
-}
+}										// betting dollar of player

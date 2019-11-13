@@ -85,7 +85,7 @@ void checkresult(){
 	
 	}
 	return ;
-}
+}					//  decide dollar and win or lose of palyer by card sum
 
 
 void checkwinner(){
@@ -95,4 +95,4 @@ void checkwinner(){
 	}
 	printf("dollar of winner : %d",max);
 	return ;
-}
+}						//  decide winner by dollar
