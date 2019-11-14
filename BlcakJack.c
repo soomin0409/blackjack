@@ -19,7 +19,7 @@ int end_card=30; // min card in cardtray
 
 
 int main(int argc, char *argv[]) {
-	int m,b; // various in print_initial_card()
+	int m,b,w; // various in print_initial_card()
 	int round=1; // index of round
 	
 	srand((unsigned)time(NULL));
@@ -48,6 +48,16 @@ int main(int argc, char *argv[]) {
 		printf("\n");
 		printf("game start---------------------------\n");
 		printf("*/press only numbers/*( go = 0 , stop = others )\n");
+		if(sum[n_user]==21)
+		{
+			for(w=0;w<n_user+1;w++){
+				print_card(w,2);
+				printf("(%d)",sum[w]);
+				printf("\n");
+			}
+		}
+		else{
+		
 		while(sum[0]<=21&&ans==0){
 			if(sum[0]==21&&n_hold[0]==2){
 				printf("palyer0:");
@@ -82,6 +92,8 @@ int main(int argc, char *argv[]) {
 				
 			printf("\n");
 		}
+				}
+		
 		printf("\n");
 		printf("round%d result--------------------------\n",round);
 		checkresult();
