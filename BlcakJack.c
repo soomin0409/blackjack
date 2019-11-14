@@ -107,6 +107,7 @@ int main(int argc, char *argv[]) {
 	checkwinner();
 	printf("\n\n\n");
 	printf("----------------------------------------------------------------------------");
-	getch(); //  preventing automatic shutdown 
+	getchar();
+	getchar(); //  preventing automatic shutdown 
 	return 0;
 }
