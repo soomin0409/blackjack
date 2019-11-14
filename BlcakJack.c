@@ -105,6 +105,6 @@ int main(int argc, char *argv[]) {
 	printf("\n");
 	printf("winner--------------------------------------\n");
 	checkwinner();
-	
+	getch();
 	return 0;
 }
