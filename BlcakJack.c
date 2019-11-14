@@ -24,7 +24,7 @@ int main(int argc, char *argv[]) {
 	
 	srand((unsigned)time(NULL));
 	
-	printf("  BLACK JACK      (((*******press only numbers*******)))\n\n");
+	printf("BLACK JACK      (((*******press only numbers*******)))\n\n");
 	configuser();
 	printf("user = player0  server = player%d \n",n_user);
 	printf("\n");
@@ -105,7 +105,7 @@ int main(int argc, char *argv[]) {
 	printf("\n");
 	printf("-------------------------------<<**winner**>>-------------------------------\n\n");
 	checkwinner();
-	printf("\n");
+	printf("\n\n\n\n\n\n\n");
 	getch(); //  preventing automatic shutdown 
 	return 0;
 }
