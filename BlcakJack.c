@@ -49,7 +49,12 @@ int main(int argc, char *argv[]) {
 		printf("game start---------------------------\n");
 		printf("*/press only numbers/*( go = 0 , stop = others )\n");
 		while(sum[0]<=21&&ans==0){
-		
+			if(sum[0]==21&&n_hold[0]==2){
+				printf("palyer0:");
+			print_card(0,j);
+			printf("(%d)",sum[0]);
+			break;
+			}
 			getaction_me();
 			if(ans!=0) {
 				printf("player0:");
