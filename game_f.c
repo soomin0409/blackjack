@@ -14,7 +14,7 @@ extern int ind;
 
 void configuser(){
 	do{
-		printf("input player:");
+		printf("input player[max%d]:",n_max_user);
 		scanf("%d",&n_user);
 		if(n_user>n_max_user) printf("try again\n");
 	}while(n_user>n_max_user);

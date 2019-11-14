@@ -33,7 +33,7 @@ int main(int argc, char *argv[]) {
 
 	mixcardtray();
 	do{	printf("\n");
-		printf("-------------[round%d start]--------------\n",round);
+		printf("-------------[round%d start//(card index %d)]--------------\n",round,ind);
 		printf("\n");
 		bet_dollar();
 		printf("\n");
