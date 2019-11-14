@@ -45,6 +45,7 @@ int main(int argc, char *argv[]) {
 			}
 
 		}
+		
 		printf("\n");
 		printf("game start---------------------------\n");
 		printf("*/press only numbers/*( go = 0 , stop = others )\n");
