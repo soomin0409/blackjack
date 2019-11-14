@@ -19,12 +19,12 @@ int end_card=30; // min card in cardtray
 
 
 int main(int argc, char *argv[]) {
-	int m,b,w; // various in print_initial_card()
+	int m,b,w; // various in print_initial_card(), print_card()
 	int round=1; // index of round
 	
 	srand((unsigned)time(NULL));
 	
-	printf("BLACK JACK (press only numbers)\n\n");
+	printf("  BLACK JACK      (((*******press only numbers*******)))\n\n");
 	configuser();
 	printf("user = player0  server = player%d \n",n_user);
 	printf("\n");
@@ -48,7 +48,7 @@ int main(int argc, char *argv[]) {
 		
 		printf("\n");
 		printf("game start---------------------------\n");
-		printf("*/press only numbers/*( go = 0 , stop = others )\n");
+		printf("< go = 0 , stop = others >   (((*******press only numbers*******)))\n");
 		if(sum[n_user]==21)
 		{
 			for(w=0;w<n_user+1;w++){
