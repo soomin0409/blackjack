@@ -16,8 +16,8 @@ void configuser(){
 	do{
 		printf("input player[max%d]:",n_max_user);
 		scanf("%d",&n_user);
-		if(n_user>n_max_user) printf("try again\n");
-	}while(n_user>n_max_user);
+		if(n_user>n_max_user||n_user<1) printf("try again\n");
+	}while(n_user>n_max_user||n_user<1);
 	return ;
 }							// input number of player
 

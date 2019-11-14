@@ -19,8 +19,8 @@ void bet_dollar(){
 	do{
 		printf("bet dollar:");
 		scanf("%d",&bet[0]);
-		if(bet[0]>dollar[0]) printf("try again\n");
-	}while(bet[0]>dollar[0]);
+		if(bet[0]>dollar[0]||bet[0]<1) printf("try again\n");
+	}while(bet[0]>dollar[0]||bet[0]<1);
 	printf("betting of player0 : %d\n",bet[0]);
 	for (i=1;i<n_user;i++){
 		do{

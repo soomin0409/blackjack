@@ -1,0 +1,43 @@
+# Project: Project
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = BlcakJack.o dollar_f.o card_pf.o card_mf.o game_f.o result_f.o
+LINKOBJ  = BlcakJack.o dollar_f.o card_pf.o card_mf.o game_f.o result_f.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = Project.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+BlcakJack.o: BlcakJack.c
+	$(CC) -c BlcakJack.c -o BlcakJack.o $(CFLAGS)
+
+dollar_f.o: dollar_f.c
+	$(CC) -c dollar_f.c -o dollar_f.o $(CFLAGS)
+
+card_pf.o: card_pf.c
+	$(CC) -c card_pf.c -o card_pf.o $(CFLAGS)
+
+card_mf.o: card_mf.c
+	$(CC) -c card_mf.c -o card_mf.o $(CFLAGS)
+
+game_f.o: game_f.c
+	$(CC) -c game_f.c -o game_f.o $(CFLAGS)
+
+result_f.o: result_f.c
+	$(CC) -c result_f.c -o result_f.o $(CFLAGS)
