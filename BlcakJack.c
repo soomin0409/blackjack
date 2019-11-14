@@ -103,8 +103,9 @@ int main(int argc, char *argv[]) {
 		initial(); 
 	}while(game_end==0);
 	printf("\n");
-	printf("winner--------------------------------------\n");
+	printf("-------------------------------<<**winner**>>-------------------------------\n\n");
 	checkwinner();
-	getch();
+	printf("\n");
+	getch(); //  preventing automatic shutdown 
 	return 0;
 }
