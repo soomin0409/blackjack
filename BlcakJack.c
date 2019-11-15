@@ -49,45 +49,39 @@ int main(int argc, char *argv[]) {
 		printf("\n");
 		printf("game start---------------------------\n");
 		printf("< go = 0 , stop = others >   (((*******press only numbers*******)))\n");
-		if(sum[n_user]==21)
-		{
-			for(w=0;w<n_user+1;w++){
-				print_card(w,2);
-				printf("(%d)",sum[w]);
-				printf("\n");
-			}
-		}
-		else{
+		
 		
 		while(sum[0]<=21&&ans==0){
+			
 			if(sum[0]==21&&n_hold[0]==2){
 				printf("palyer0:");
-			print_card(0,j);
-			printf("(%d)",sum[0]);
-			break;
+				print_card(0,j);
+				printf("(%d)",sum[0]);
+				printf("...............black jack// dollar: %d ",dollar[0]+2*bet[0]);
+				break;
 			}
+			
 			getaction_me();
+			
 			if(ans!=0) {
 				printf("player0:");
 				print_card(0,j); 
 				printf("(%d)",sum[0]);
 				break;
 			}
+			
 			printf("palyer0:");
 			print_card(0,j);
 			calc_sum(0,j-1);
 			printf("(%d)",sum[0]);
+			if (sum[0]>21){
+				printf("...............over flow// dollar: %d ",dollar[0]-bet[0]);
+			}
 		}		
+		
 		printf("\n");
 		
-		if(n_user==1&&sum[0]==21&&n_hold[0]==2){
-			printf("player1:");
-			print_card(1,2);
-			printf("(%d)",sum[1]);
-			printf("\n");
-		}
-		
-		else{
+	
 		
 			for(m=1;m<n_user+1;m++)
 			{	v=2;
@@ -99,11 +93,14 @@ int main(int argc, char *argv[]) {
 				printf("player%d:",m);	
 				print_card(m,v);
 				printf("(%d)",sum[m]);
-				
+				if(m!=n_user&&sum[m]==21&&n_hold[m]==2) printf("...............black jack// dollar: %d ",dollar[m]+2*bet[m]);
+				else if(m!=n_user&&sum[m]>21) printf("...............over flow// dollar: %d ",dollar[m]-bet[m]);
+				if(m==n_user&&sum[m]==21&&n_hold[m]==2) printf("...............black jack");
+				else if(m==n_user&&sum[m]>21) printf("...............over flow");
 				printf("\n");
-				}				
-		}
-				}
+			}				
+		
+				
 		
 		printf("\n");
 		printf("round%d result--------------------------\n",round);
@@ -111,7 +108,9 @@ int main(int argc, char *argv[]) {
 		keep_go();
 		++round;
 		initial(); 
+
 	}while(game_end==0);
+	
 	printf("\n");
 	printf("-------------------------------<<**winner**>>-------------------------------\n\n\n");
 	checkwinner();
