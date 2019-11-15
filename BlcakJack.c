@@ -70,6 +70,7 @@ int main(int argc, char *argv[]) {
 				break;
 			}
 			
+			
 			printf("palyer0:");
 			print_card(0,j);
 			calc_sum(0,j-1);
