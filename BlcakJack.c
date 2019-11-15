@@ -33,7 +33,8 @@ int main(int argc, char *argv[]) {
 
 	mixcardtray();
 	do{	printf("\n");
-		printf("-------------[round%d start//(card index %d)]--------------\n",round,ind);
+		printf("-------------------------[round%d start//(card index %d)]------------------------\n",round,ind);
+		printf("---------------------------------------------------------------------------------\n");
 		printf("\n");
 		bet_dollar();
 		printf("\n");
@@ -47,8 +48,8 @@ int main(int argc, char *argv[]) {
 		}
 		
 		printf("\n");
-		printf("game start---------------------------\n");
-		printf("< go = 0 , stop = others >   (((*******press only numbers*******)))\n");
+		printf("game start--------------------------------------------------------\n");
+		printf("< go = 0 , stop = others >  (((*******press only numbers*******)))\n");
 		
 		
 		while(sum[0]<=21&&ans==0){
@@ -104,7 +105,7 @@ int main(int argc, char *argv[]) {
 				
 		
 		printf("\n");
-		printf("round%d result--------------------------\n",round);
+		printf("round%d result-----------------------------------------------------\n",round);
 		checkresult();
 		keep_go();
 		++round;
@@ -112,11 +113,13 @@ int main(int argc, char *argv[]) {
 
 	}while(game_end==0);
 	
-	printf("\n");
-	printf("-------------------------------<<**winner**>>-------------------------------\n\n\n");
+	printf("\n\n");
+	printf("**********************************************************************************\n");
+	printf("----------------------------------<<**winner**>>----------------------------------\n");
+	printf("**********************************************************************************\n\n");
 	checkwinner();
-	printf("\n\n\n");
-	printf("----------------------------------------------------------------------------\n");
+	printf("\n\n");
+	printf("----------------------------------------------------------------------------------\n\n");
 	printf("press enter . . . \n\n");
 	getchar();
 	getchar(); //  preventing automatic shutdown 
