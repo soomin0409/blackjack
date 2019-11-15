@@ -78,20 +78,30 @@ int main(int argc, char *argv[]) {
 			calc_sum(0,j-1);
 			printf("(%d)",sum[0]);
 		}		
-		
 		printf("\n");
-		for(m=1;m<n_user+1;m++)
-		{	v=2;
-			while(sum[m]<17){
-				
-				getaction_com(m);
-				calc_sum(m,v-1);
-			}
-			printf("player%d:",m);	
-			print_card(m,v);
-			printf("(%d)",sum[m]);
-				
+		
+		if(n_user==1&&sum[0]==21&&n_hold[0]==2){
+			printf("player1:");
+			print_card(1,2);
+			printf("(%d)",sum[1]);
 			printf("\n");
+		}
+		
+		else{
+		
+			for(m=1;m<n_user+1;m++)
+			{	v=2;
+				while(sum[m]<17){
+				
+					getaction_com(m);
+					calc_sum(m,v-1);
+				}
+				printf("player%d:",m);	
+				print_card(m,v);
+				printf("(%d)",sum[m]);
+				
+				printf("\n");
+				}				
 		}
 				}
 		
