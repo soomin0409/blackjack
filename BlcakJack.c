@@ -106,7 +106,8 @@ int main(int argc, char *argv[]) {
 	printf("-------------------------------<<**winner**>>-------------------------------\n\n\n");
 	checkwinner();
 	printf("\n\n\n");
-	printf("----------------------------------------------------------------------------");
+	printf("----------------------------------------------------------------------------\n");
+	printf("press enter . . . \n\n");
 	getchar();
 	getchar(); //  preventing automatic shutdown 
 	return 0;
