@@ -11,7 +11,7 @@ extern int game_end;
 extern int end_card;
 extern int dollar[n_max_user];
 extern int ind;
-
+extern int a[n_max_user+1];
 void configuser(){
 	do{
 		printf("input player[max%d]:",n_max_user);
@@ -28,8 +28,13 @@ void calc_sum(int i,int k){
 		if(c==11||c==12||c==13) c=10;
 		else if(sum[i]<=10&&c==1) c=11;
 		else if(sum[i]>10&&c==1) c=1;
-	
 		sum[i]+=c;
+		if (c==11) a[i]=1;
+		if(a[i]==1&&sum[i]>21){
+			sum[i]-=10;
+			a[i]=0;
+		}
+		
 	return ;
 }						// sum holding card of player
 	
@@ -68,6 +73,7 @@ void initial(){
 	for(i=0;i<n_max_user+1;i++){
 		sum[i]=0;
 		n_hold[i]=0;
+		a[i]=0;
 	}
 	for(i=0;i<n_max_user+1;i++){
 		for(h=0;h<n_max_card;h++)
