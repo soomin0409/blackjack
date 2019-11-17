@@ -11,7 +11,7 @@ int ind=0;// card index
 int cardhold[n_max_user+1][n_max_card]; // current card of player
 int n_hold[n_max_user+1]={ 0, }; // number of player holding card
 int sum[n_max_user+1]={ 0, }; // sum of card
-int a[n_max_user+1]={ 0, };
+int a[n_max_user+1]={ 0, };// card A 1 or 11
 int j=2; // variable in printcard(), calc_sum()
 int ans; // go or stop answer in getaction_me()
 int v=2; // variable in printcard() , calc_sum()
