@@ -29,7 +29,7 @@ void calc_sum(int i,int k){
 		else if(sum[i]<=10&&c==1) c=11;
 		else if(sum[i]>10&&c==1) c=1;
 		sum[i]+=c;
-		if (c==11) a[i]=1;
+		if(c==11) a[i]=1;
 		if(a[i]==1&&sum[i]>21){
 			sum[i]-=10;
 			a[i]=0;
