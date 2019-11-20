@@ -11,7 +11,7 @@ void checkresult(){
 		if(sum[n_user]==21&&n_hold[n_user]==2){
 			if(sum[i]==21&&n_hold[i]==2){
 				dollar[i]+=2*bet[i];
-				printf("player%d win|| doller :%d\n",i,dollar[i]);
+				printf("player%d  win|| doller :%d\n",i,dollar[i]);
 			}
 			else {
 			dollar[i]-=bet[i];
@@ -21,11 +21,11 @@ void checkresult(){
 		else if(sum[n_user]==21&&n_hold[n_user]>2){
 			if(sum[i]==21&&n_hold[i]==2){
 				dollar[i]+=bet[i]*2;
-				printf("player%d win|| doller :%d\n",i,dollar[i]);
+				printf("player%d  win|| doller :%d\n",i,dollar[i]);
 			}
 			else if(sum[i]==21&&n_hold[i]>2){
 				dollar[i]+=bet[i];
-				printf("player%d win|| doller :%d\n",i,dollar[i]);
+				printf("player%d  win|| doller :%d\n",i,dollar[i]);
 			}
 			else {
 				dollar[i]-=bet[i];
@@ -37,15 +37,15 @@ void checkresult(){
 		{
 			if(sum[i]==21&&n_hold[i]==2){
 				dollar[i]+=bet[i]*2;
-				printf("player%d win|| doller :%d\n",i,dollar[i]);
+				printf("player%d  win|| doller :%d\n",i,dollar[i]);
 			}
 			else if(sum[i]==21&&n_hold[i]>2){
 				dollar[i]+=bet[i];
-				printf("player%d win|| doller :%d\n",i,dollar[i]);
+				printf("player%d  win|| doller :%d\n",i,dollar[i]);
 			}
 			else if(sum[i]<21&&sum[i]>=sum[n_user]){
 				dollar[i]+=bet[i];
-				printf("player%d win|| doller :%d\n",i,dollar[i]);
+				printf("player%d  win|| doller :%d\n",i,dollar[i]);
 			}
 			else {
 				dollar[i]-=bet[i];
@@ -57,15 +57,15 @@ void checkresult(){
 		else if(sum[n_user]<=21&&n_hold[n_user]>2){
 			if(sum[i]<21&&sum[i]>=sum[n_user]){
 				dollar[i]+=bet[i];
-				printf("player%d win|| doller :%d\n",i,dollar[i]);
+				printf("player%d  win|| doller :%d\n",i,dollar[i]);
 			}
 			else if(sum[i]==21&&n_hold[i]==2){
 				dollar[i]+=bet[i]*2;
-				printf("player%d win|| doller :%d\n",i,dollar[i]);
+				printf("player%d  win|| doller :%d\n",i,dollar[i]);
 			}
 			else if(sum[i]==21&&n_hold[i]>2){
 				dollar[i]+=bet[i];
-				printf("player%d win|| doller :%d\n",i,dollar[i]);
+				printf("player%d  win|| doller :%d\n",i,dollar[i]);
 			}
 			else {
 				dollar[i]-=bet[i];
@@ -79,11 +79,11 @@ void checkresult(){
 			}
 			else if(sum[i]==21&&n_hold[i]==2){
 				dollar[i]+=bet[i]*2;
-				printf("player%d win|| doller :%d\n",i,dollar[i]);
+				printf("player%d  win|| doller :%d\n",i,dollar[i]);
 			}
 			else {
 				dollar[i]+=bet[i];
-				printf("player%d win|| doller :%d\n",i,dollar[i]);
+				printf("player%d  win|| doller :%d\n",i,dollar[i]);
 			}
 		}
 	
