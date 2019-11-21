@@ -33,7 +33,7 @@ void calc_sum(int i,int k){
 		if(a[i]==1&&sum[i]>21){
 			sum[i]-=10;
 			a[i]=0;
-		}
+		}                // a  is  1 or 11 
 		
 	return ;
 }						// sum holding card of player
